@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<lang lang="ja">
+<head prefix="og:http://ogp.me/ns#">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="format-detection" content="telephone=no, email=no, address=no">
+<link rel="icon" href="/images/kotobaha-logo-icon.svg">
+
+<meta property="og:url" content="">
+<meta property="og:type" content="">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:site_name" content="">
+<meta property="og:image" content="">
+<meta property="og:local" content="ja_JP">
+<meta name="twitter:" content="summaary_large_image">
+<meta name="twitter:site" content="@　twitterユーザーID　">
+<meta property="fb:app_id" content="">
+
+<title></title>
+<meta name="description" content="">
+
+<link rel="stylesheet" href="/css/sanitize.css">
+<link rel="stylesheet" href="/css/my_reset.css">
+<link rel="stylesheet" href="/css/contact.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/index.html"><img src="/images/kotobaha-logo-icon.svg" alt="" class="logo__img"></a>
+        </div>
+        <div class="back-top-page">
+            <a href="/index.html"><img src="/images/back-top-page.svg" alt="" class="back-top-page__img"></a>
+        </div>
+        <div class="sns">
+            <a class="sns__link" href="https://twitter.com/kotobaha1"><img class="sns__link-img" src="/images/twitter.svg" alt=""></a>
+        </div>
+    </header>
+    <main>
+        <h1>お問い合わせフォーム</h1>
+        <section class="contact">
+            <div class="contact__flex-container">
+                <div class="contact__form">
+                    <form action="./contact.php" method="post" name="contactForm">
+                        <ul class="form__list">
+                            <li class="form__item">
+                                <label for="form-name">
+                                    <span>お名前</span>
+                                    <input type="text" name="form-name" id="formName" required="true" maxlength="100" placeholder="ペンネーム可（ご応募の場合）" value="<?php echo $_SESSION['fullname'] ?>">
+                                </label>
+                            </li>
+                            <li class="form__item">
+                                <label for="form-mail">
+                                    <span>メールアドレス</span>
+                                    <input type="email" name="form-mail" id="formMail" required="true" placeholder="xxxxx@mail.com" value="<?php echo $_SESSION['email'] ?>">
+                                </label>
+                            </li>
+                            <li class="form__item">
+                                <label for="form-text">
+                                    <span>お問い合わせ内容</span>
+                                    <textarea name="form-text" id="formText" cols="30" rows="10" maxlength="2000" required="true" placeholder="最大2000文字まで"><?php echo $_SESSION['message'] ?></textarea>
+                                </label>
+                            </li>
+                        </ul>
+                        <div class="form__privacy-policy">
+                                <p class="privacy-policy__text">お問い合わせには、<a href="" class="privacy-policy__link">プライバシーポリシーへの同意が必要です。</a></p>
+                        </div>
+                        <div class="form__button">
+                            <button class="form__submit" type="button" id="btn">同意の上、入力内容を確認</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="contact__flex-item">
+                    <p class="contact__text">
+                        <a href="https://twitter.com/kotobaha1" class="contact__link"><span class="contact__link-text">Twitterのダイレクトメール</span></a><br>
+                        からもお問い合わせいただけます。
+                    </p>
+                </div>
+            </div>
+        </section>  
+    </main>
+    <footer class="footer">
+        <img src="/images/kotobaha-logo-02.svg" alt="" class="footer__logo">
+        <span class="footer__title">コトバハ<span class="footer__title-dash">——</span></span>
+        <span class="footer__pc-title">コトバハ<span class="footer__title-dash">——</span></span>
+
+        
+        <div class="credit-title-and-copyright">
+            <span class="designer">design by <a href="" class="designer-name">Fumiaki Shishido</a></span>
+            <span class="copyright">©︎ kotobaha——</span>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="/script/script.js"></script>
+    <script type="text/javascropt" src="/script/form.js"></script>
+</body>
+
+</html>
